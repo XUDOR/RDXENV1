@@ -1,0 +1,64 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  font-size: 1rem;
+  background-color: #27332d;
+  color: #ebefdf;
+}
+
+ h2{ 
+  font-weight: lighter;
+
+ }
+header {
+  display: grid;
+  grid-template-columns: 1fr; /* This creates a single column */
+  background-color: #225f6e;
+}
+
+.name-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: start;
+  gap: 20px; /* Adjust this value to control space between items */
+  border: 1px solid #ceddc2;
+  padding: 5px;
+}
+
+.nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 20px; /* Adjust this value to control space between items */
+  padding: 0;
+  list-style-type: none;
+}
+
+.nav li {
+  text-align: center;
+}
+
+.nav a {
+  color: #829d9e; /* This sets the color for all link states */
+  text-decoration: none; /* Optional: removes the underline */
+  padding: 10px 15px; /* Adds some clickable area around the text */
+  display: block; /* Makes the entire grid cell clickable */
+}
+
+/* You can also set different colors for different link states */
+.nav a:hover {
+  color: #a0c0c0; /* Change color on hover */
+}
+
+.nav a:active {
+  color: #608080; /* Change color when the link is being clicked */
+}
+
+.nav a:visited {
+  color: #708090; /* Change color for visited links */
+}
+
+
+footer {
+  background-color: #184551;
+
+}
