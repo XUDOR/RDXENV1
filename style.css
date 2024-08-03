@@ -8,8 +8,13 @@ body {
 
  h2{ 
   font-weight: lighter;
-
  }
+
+ p {
+  font-weight: lighter;
+  font-size: 14px;
+ }
+
 header {
   display: grid;
   grid-template-columns: 1fr; /* This creates a single column */
