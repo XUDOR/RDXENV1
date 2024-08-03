@@ -64,6 +64,23 @@ header {
 }
 
 
+
+.imageCont {
+  width: 100%; /* or any specific width */
+  max-width: 600px; /* or any maximum width you prefer */
+  margin: 0 auto; /* centers the container if it's narrower than its parent */
+}
+
+.imageCont img {
+  width: 100%; /* makes the image responsive */
+  height: auto; /* maintains aspect ratio */
+  display: block; /* removes any unwanted space below the image */
+}
+
+
+
+
+
 footer {
   background-color: #184551;
 
