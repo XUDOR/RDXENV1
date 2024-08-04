@@ -70,7 +70,7 @@ header {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  gap: 20px;
+  gap: 30px;
   padding: 20px;
   width: 100%;
   box-sizing: border-box;
@@ -78,7 +78,7 @@ header {
 
 .project-item {
   flex: 0 0 auto;
-  width: 90vw; /* Use viewport width for responsiveness */
+  width: 100vw; /* Use viewport width for responsiveness */
   max-width: 500px; /* Adjust this value as needed */
   scroll-snap-align: start;
   display: flex;
