@@ -44,26 +44,32 @@ header {
 }
 
 .nav a {
-  color: #829d9e; /* This sets the color for all link states */
-  text-decoration: none; /* Optional: removes the underline */
-  padding: 10px 15px; /* Adds some clickable area around the text */
-  display: block; /* Makes the entire grid cell clickable */
+  color: #829d9e; 
+  text-decoration: none; 
+  padding: 10px 15px; 
+  display: block; 
 }
 
-/* You can also set different colors for different link states */
+/* ===================NAV */
 .nav a:hover {
-  color: #a0c0c0; /* Change color on hover */
+  color: #a0c0c0; 
 }
 
 .nav a:active {
-  color: #608080; /* Change color when the link is being clicked */
+  color: #608080; 
 }
 
 .nav a:visited {
-  color: #708090; /* Change color for visited links */
+  color: #708090; 
 }
 
+/* ++++++++++++++++++++++++++project section */
 
+.description{  
+background-color: #225f6e;
+
+
+}
 
 .imageCont {
   width: 100%; /* or any specific width */
@@ -77,9 +83,46 @@ header {
   display: block; /* removes any unwanted space below the image */
 }
 
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
 
+.project-item {
+  scroll-snap-align: start;
+  min-width: 300px;
+}
 
+.project-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
 
+.nav-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #225f6e;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.nav-dot.active {
+  background-color: #ebefdf;
+}
+
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 100%;
+  }
+}
+
+/* ++++++++++++++++++++++++++FOOTER section */
 
 footer {
   background-color: #184551;
