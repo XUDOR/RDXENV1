@@ -64,39 +64,56 @@ header {
 }
 
 /* ++++++++++++++++++++++++++project section */
-
-.description{  
-background-color: #225f6e;
-
-
-}
-
-.imageCont {
-  width: 100%; /* or any specific width */
-  max-width: 600px; /* or any maximum width you prefer */
-  margin: 0 auto; /* centers the container if it's narrower than its parent */
-}
-
-.imageCont img {
-  width: 100%; /* makes the image responsive */
-  height: auto; /* maintains aspect ratio */
-  display: block; /* removes any unwanted space below the image */
-}
-
+/* Project section */
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .project-item {
+  flex: 0 0 auto;
+  width: 80%;
+  max-width: 300px;
   scroll-snap-align: start;
-  min-width: 300px;
+  display: flex;
+  flex-direction: column;
 }
 
+.imageCont {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.imageCont img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.description {
+  padding: 10px;
+  background-color: rgba(34, 95, 110, 0.8);
+  font-size: 0.9rem;
+}
+
+/* Hide scrollbar for cleaner look */
+.project-grid::-webkit-scrollbar {
+  display: none;
+}
+.project-grid {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Navigation dots */
 .project-nav {
   display: flex;
   justify-content: center;
@@ -116,9 +133,9 @@ background-color: #225f6e;
   background-color: #ebefdf;
 }
 
-@media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: 100%;
+@media (min-width: 768px) {
+  .project-item {
+    width: 300px;
   }
 }
 
