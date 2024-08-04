@@ -26,12 +26,6 @@ const projectsData = [
 ];
 
 
-
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
   const projectGrid = document.querySelector('.project-grid');
   const projectNav = document.querySelector('.project-nav');
@@ -59,7 +53,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const navDots = document.querySelectorAll('.nav-dot');
 
   function scrollToProject(index) {
-    projects[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+    const projectItem = projects[index];
+    projectGrid.scrollTo({
+      left: projectItem.offsetLeft - projectGrid.offsetLeft,
+      behavior: 'smooth'
+    });
   }
 
   // Update active dot on scroll
