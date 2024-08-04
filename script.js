@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     projectNav.appendChild(dot);
   });
 
+  // Move these declarations here, after the items have been created
   const projects = document.querySelectorAll('.project-item');
   const navDots = document.querySelectorAll('.nav-dot');
 
@@ -93,4 +94,9 @@ document.addEventListener('DOMContentLoaded', () => {
       scrollToProject(prevIndex);
     }
   }
+
+  // Ensure the scroll starts at the beginning
+  projectGrid.scrollLeft = 0;
+  // Activate the first dot
+  navDots[0].classList.add('active');
 });

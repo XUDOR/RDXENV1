@@ -78,8 +78,8 @@ header {
 
 .project-item {
   flex: 0 0 auto;
-  width: 80%;
-  max-width: 300px;
+  width: 90vw; /* Use viewport width for responsiveness */
+  max-width: 500px; /* Adjust this value as needed */
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
@@ -135,7 +135,8 @@ header {
 
 @media (min-width: 768px) {
   .project-item {
-    width: 300px;
+    width: 45vw; /* Adjust for larger screens */
+    max-width: 600px; /* Increase max-width for larger screens */
   }
 }
 
