@@ -70,7 +70,7 @@ header {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  gap: 30px;
+  gap: 20px;
   padding: 20px;
   width: 100%;
   box-sizing: border-box;
