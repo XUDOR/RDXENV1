@@ -148,7 +148,6 @@ document.addEventListener('DOMContentLoaded', () => {
     projectNav.appendChild(dot);
   });
 
-  // Move these declarations here, after the items have been created
   const projects = document.querySelectorAll('.project-item');
   const navDots = document.querySelectorAll('.nav-dot');
 
@@ -168,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Simple swipe detection
+  // Simple swipe detection with improved accuracy
   let touchStartX = 0;
   let touchEndX = 0;
 
@@ -182,17 +181,37 @@ document.addEventListener('DOMContentLoaded', () => {
   }, false);
 
   function handleSwipe() {
-    if (touchStartX - touchEndX > 50) {
+    const threshold = 50; // Minimum swipe distance
+    const currentIndex = Math.round(projectGrid.scrollLeft / projectGrid.offsetWidth);
+
+    if (touchStartX - touchEndX > threshold) {
       // Swipe left
-      const nextIndex = Math.min(Math.round(projectGrid.scrollLeft / projectGrid.offsetWidth) + 1, projects.length - 1);
+      const nextIndex = Math.min(currentIndex + 1, projects.length - 1);
       scrollToProject(nextIndex);
-    }
-    if (touchEndX - touchStartX > 50) {
+    } else if (touchEndX - touchStartX > threshold) {
       // Swipe right
-      const prevIndex = Math.max(Math.round(projectGrid.scrollLeft / projectGrid.offsetWidth) - 1, 0);
+      const prevIndex = Math.max(currentIndex - 1, 0);
       scrollToProject(prevIndex);
     }
   }
+
+  // Tap areas for navigation
+  projectGrid.addEventListener('click', e => {
+    const rect = projectGrid.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+
+    const currentIndex = Math.round(projectGrid.scrollLeft / projectGrid.offsetWidth);
+
+    if (x < rect.width * 0.1) {
+      // Tap left area
+      const prevIndex = Math.max(currentIndex - 1, 0);
+      scrollToProject(prevIndex);
+    } else if (x > rect.width * 0.9) {
+      // Tap right area
+      const nextIndex = Math.min(currentIndex + 1, projects.length - 1);
+      scrollToProject(nextIndex);
+    }
+  });
 
   // Ensure the scroll starts at the beginning
   projectGrid.scrollLeft = 0;
