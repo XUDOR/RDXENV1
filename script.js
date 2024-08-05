@@ -23,6 +23,43 @@ const projectsData = [
     imageUrl: "https://storage.googleapis.com/ip-public-bucket1/New-Domes-of-Earth/4_NEW-DOMES.png",
     altText: "Interstellar Packges-New-Domes-of-Earth"
   },
+
+  {
+    description: "Interstellar Packges | Natura | 2022 ",
+    imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Natura/5_NATURA.png",
+    altText: "Interstellar Packges-Natura"
+  },
+
+  {
+    description: "Interstellar Packges | Outer Corners | 2022 ",
+    imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Outer-Corners/6_OUTER-CORNERS.png",
+    altText: "Interstellar Packges-Outer-Corners"
+  },
+
+  {
+    description: "Interstellar Packges | Nonagon | 2022",
+    imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Nonagon/7_NONAGON.png",
+    altText: "Interstellar Packges-Nonagon"
+  },
+
+  {
+    description: "Interstellar Packges | Ambient Garden One | 2022",
+    imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Ambient-Garden-One/8_AMBIENTGARDENONE.png",
+    altText: "Interstellar Packges-Ambient-Garden-One"
+  },
+
+  {
+    description: "Interstellar Packges | Music for Seven Structures | 2022",
+    imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Music-For-Seven-Structures/9_7STRUCTURES.png",
+    altText: "Interstellar Packges-Music-for-Seven-Structures"
+  },
+
+  {
+    description: "Interstellar Packges | Inner Moments of Light | 2022",
+    imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Inner-Moment-of-Light/10_INNER-MOMENTS.png",
+    altText: "Interstellar Packges-Inner-Moments-of-Light"
+  },
+
 ];
 
 
