@@ -153,15 +153,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function scrollToProject(index) {
     const projectItem = projects[index];
+    const centerPosition = projectItem.offsetLeft - (projectGrid.offsetWidth / 2) + (projectItem.offsetWidth / 2);
     projectGrid.scrollTo({
-      left: projectItem.offsetLeft - projectGrid.offsetLeft,
+      left: centerPosition,
       behavior: 'smooth'
     });
   }
 
   // Update active dot on scroll
   projectGrid.addEventListener('scroll', () => {
-    const index = Math.round(projectGrid.scrollLeft / projectGrid.offsetWidth);
+    const index = Math.round((projectGrid.scrollLeft + (projectGrid.offsetWidth / 2)) / projectGrid.offsetWidth);
     navDots.forEach((dot, i) => {
       dot.classList.toggle('active', i === index);
     });
@@ -182,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function handleSwipe() {
     const threshold = 50; // Minimum swipe distance
-    const currentIndex = Math.round(projectGrid.scrollLeft / projectGrid.offsetWidth);
+    const currentIndex = Math.round((projectGrid.scrollLeft + (projectGrid.offsetWidth / 2)) / projectGrid.offsetWidth);
 
     if (touchStartX - touchEndX > threshold) {
       // Swipe left
@@ -200,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const rect = projectGrid.getBoundingClientRect();
     const x = e.clientX - rect.left;
 
-    const currentIndex = Math.round(projectGrid.scrollLeft / projectGrid.offsetWidth);
+    const currentIndex = Math.round((projectGrid.scrollLeft + (projectGrid.offsetWidth / 2)) / projectGrid.offsetWidth);
 
     if (x < rect.width * 0.1) {
       // Tap left area
@@ -218,3 +219,4 @@ document.addEventListener('DOMContentLoaded', () => {
   // Activate the first dot
   navDots[0].classList.add('active');
 });
+

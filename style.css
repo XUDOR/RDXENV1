@@ -116,15 +116,16 @@ header {
 /* Navigation dots */
 .project-nav {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+  grid-template-columns: repeat(5, auto);
+  grid-template-rows: repeat(4, auto);
   gap: 10px;
-  justify-content: center;
+  justify-content: left;
   margin-top: 20px;
 }
 
 .nav-dot {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   background-color: #225f6e;
   cursor: pointer;
 }
@@ -132,6 +133,9 @@ header {
 .nav-dot.active {
   background-color: #ebefdf;
 }
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>RESPONSIVE--MOBILE--TABLET */
+
 
 @media (min-width: 768px) {
   .project-item {
