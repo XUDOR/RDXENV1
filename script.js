@@ -114,6 +114,13 @@ const projectsData = [
     altText: "Interstellar Packges-Rhombus"
   },
 
+  {
+    description: "Interstellar Packges | Vignettes of Clouds | 2024",
+    imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Vignettes-of-Clouds/20_Vignettes-of-Clouds.png",
+    altText: "Interstellar Packges-Vignettes-of-Clouds"
+  },
+
+
 
 ];
 
