@@ -60,6 +60,61 @@ const projectsData = [
     altText: "Interstellar Packges-Inner-Moments-of-Light"
   },
 
+  {
+    description: "Interstellar Packges | Nocturnes & Reveries | 2022",
+    imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Nocturnes-and-Reveries/11_NOCTURNES-REVERIES.png",
+    altText: "Interstellar Packges-Nocturnes-and-Reveries"
+  },
+
+  {
+    description: "Interstellar Packges | Prefabrication | 2023",
+    imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Prefabrication/12_PREFABRICATION.png",
+    altText: "Interstellar Packges-Prefabrication"
+  },
+
+  {
+    description: "Interstellar Packges | Vagary | 2023",
+    imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Vagary/13_VAGARY.png",
+    altText: "Interstellar Packges-Vagary"
+  },
+
+  {
+    description: "Interstellar Packges | Amsterdam Concreet | 2023",
+    imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Amsterdam-Concreet/14_AMSTERDAM-CONCREET.png",
+    altText: "Interstellar Packges-Amsterdam-Concreet"
+  },
+
+  {
+    description: "Interstellar Packges | Watercolours for Friends | 2023",
+    imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Watercolours-for-Friends/15_WATERCOLOURS.png",
+    altText: "Interstellar Packges-Watercolours for Friends"
+  },
+
+  {
+    description: "Interstellar Packges | Postcards from Old Sounds | 2023",
+    imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Postcards-From-Old-Sounds/16_POSTACARDS-OLD-SOUNDS.png",
+    altText: "Interstellar Packges-Postcards from Old Sounds"
+  },
+
+  {
+    description: "Interstellar Packges | Sakura | 2023",
+    imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Sakura/17_SAKURA.png",
+    altText: "Interstellar Packges-Sakura"
+  },
+
+  {
+    description: "Interstellar Packges | Poem for a Homewolrd | 2023",
+    imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Poem-For-A-Homeworld/18_POEM-HOMEWORLD.png",
+    altText: "Interstellar Packges-Poem-for-a-Homewolrd"
+  },
+
+  {
+    description: "Interstellar Packges | Rhombus | 2023",
+    imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Rhombus/19_RHOMBUS.png",
+    altText: "Interstellar Packges-Rhombus"
+  },
+
+
 ];
 
 
