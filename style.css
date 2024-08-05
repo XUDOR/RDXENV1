@@ -99,9 +99,9 @@ header {
 }
 
 .description {
-  padding: 10px;
+  padding: 5px;
   background-color: rgba(34, 95, 110, 0.8);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 /* Hide scrollbar for cleaner look */
@@ -120,12 +120,12 @@ header {
   grid-template-rows: repeat(4, auto);
   gap: 10px;
   justify-content: left;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .nav-dot {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   background-color: #225f6e;
   cursor: pointer;
 }
