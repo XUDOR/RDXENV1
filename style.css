@@ -11,6 +11,10 @@ body {
   font-size: 1.2rem;
  }
 
+ .title {
+  border-bottom: 1px solid #225f6e ;
+  padding-bottom: 5px;
+ }
  p {
   font-weight: 300;
   font-size: .8rem;
