@@ -78,7 +78,7 @@ header {
 
 .project-item {
   flex: 0 0 auto;
-  width: 100vw; /* Use viewport width for responsiveness */
+  width: 98vw; /* Use viewport width for responsiveness */
   max-width: 500px; /* Adjust this value as needed */
   scroll-snap-align: start;
   display: flex;
@@ -115,17 +115,19 @@ header {
 
 /* Navigation dots */
 .project-nav {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+  gap: 10px;
   justify-content: center;
   margin-top: 20px;
 }
 
 .nav-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  
   background-color: #225f6e;
-  margin: 0 5px;
+  
   cursor: pointer;
 }
 
