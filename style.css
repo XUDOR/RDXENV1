@@ -93,6 +93,7 @@ header {
   width: 100%;
   aspect-ratio: 1 / 1;
   overflow: hidden;
+  margin: 3px;
 }
 
 .imageCont img {
@@ -104,7 +105,9 @@ header {
 
 .description {
   padding: 5px;
-  background-color: rgba(34, 95, 110, 0.8);
+  border-bottom: 1px solid #225f6e;
+  margin-bottom: 2px;
+  margin-left: 5px;
   font-size: 0.8rem;
 }
 
