@@ -144,7 +144,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Create navigation dot
     const dot = document.createElement('div');
     dot.classList.add('nav-dot');
-    dot.addEventListener('click', () => scrollToProject(index));
+    dot.addEventListener('click', () => {
+      console.log(`Nav dot clicked: ${index}`);
+      scrollToProject(index);
+    });
     projectNav.appendChild(dot);
   });
 
@@ -154,69 +157,89 @@ document.addEventListener('DOMContentLoaded', () => {
   function scrollToProject(index) {
     const projectItem = projects[index];
     const centerPosition = projectItem.offsetLeft - (projectGrid.offsetWidth / 2) + (projectItem.offsetWidth / 2);
+    console.log(`Scrolling to project index: ${index}, centerPosition: ${centerPosition}`);
     projectGrid.scrollTo({
       left: centerPosition,
       behavior: 'smooth'
     });
+    updateActiveDot(index);
   }
 
-  // Update active dot on scroll
-  projectGrid.addEventListener('scroll', () => {
-    const index = Math.round((projectGrid.scrollLeft + (projectGrid.offsetWidth / 2)) / projectGrid.offsetWidth);
+  function updateActiveDot(index) {
+    console.log(`Updating active dot to index: ${index}`);
     navDots.forEach((dot, i) => {
       dot.classList.toggle('active', i === index);
     });
+  }
+
+  function getCurrentIndex() {
+    const projectItemWidth = projects[0].offsetWidth;
+    const adjustedScrollLeft = projectGrid.scrollLeft + (projectGrid.offsetWidth / 2);
+    const currentIndex = Math.floor(adjustedScrollLeft / projectItemWidth);
+    console.log(`Current index calculated: ${currentIndex}, scrollLeft: ${projectGrid.scrollLeft}, adjustedScrollLeft: ${adjustedScrollLeft}, projectItemWidth: ${projectItemWidth}`);
+    return currentIndex;
+  }
+
+  projectGrid.addEventListener('scroll', () => {
+    const index = getCurrentIndex();
+    updateActiveDot(index);
   });
 
-  // Simple swipe detection with improved accuracy
   let touchStartX = 0;
   let touchEndX = 0;
 
   projectGrid.addEventListener('touchstart', e => {
     touchStartX = e.changedTouches[0].screenX;
+    console.log(`Touch start: ${touchStartX}`);
   }, false);
 
   projectGrid.addEventListener('touchend', e => {
     touchEndX = e.changedTouches[0].screenX;
+    console.log(`Touch end: ${touchEndX}`);
     handleSwipe();
   }, false);
 
   function handleSwipe() {
-    const threshold = 50; // Minimum swipe distance
-    const currentIndex = Math.round((projectGrid.scrollLeft + (projectGrid.offsetWidth / 2)) / projectGrid.offsetWidth);
+    const threshold = 50;
+    const currentIndex = getCurrentIndex();
+    console.log(`Handling swipe: touchStartX: ${touchStartX}, touchEndX: ${touchEndX}, currentIndex: ${currentIndex}`);
 
     if (touchStartX - touchEndX > threshold) {
-      // Swipe left
       const nextIndex = Math.min(currentIndex + 1, projects.length - 1);
+      console.log(`Swiped left: nextIndex: ${nextIndex}`);
       scrollToProject(nextIndex);
     } else if (touchEndX - touchStartX > threshold) {
-      // Swipe right
       const prevIndex = Math.max(currentIndex - 1, 0);
+      console.log(`Swiped right: prevIndex: ${prevIndex}`);
       scrollToProject(prevIndex);
     }
   }
 
-  // Tap areas for navigation
   projectGrid.addEventListener('click', e => {
     const rect = projectGrid.getBoundingClientRect();
     const x = e.clientX - rect.left;
-
-    const currentIndex = Math.round((projectGrid.scrollLeft + (projectGrid.offsetWidth / 2)) / projectGrid.offsetWidth);
+    const currentIndex = getCurrentIndex();
+    console.log(`Click event: x: ${x}, currentIndex: ${currentIndex}`);
 
     if (x < rect.width * 0.1) {
-      // Tap left area
       const prevIndex = Math.max(currentIndex - 1, 0);
+      console.log(`Tap left area: prevIndex: ${prevIndex}`);
       scrollToProject(prevIndex);
     } else if (x > rect.width * 0.9) {
-      // Tap right area
       const nextIndex = Math.min(currentIndex + 1, projects.length - 1);
+      console.log(`Tap right area: nextIndex: ${nextIndex}`);
       scrollToProject(nextIndex);
     }
   });
 
-  // Ensure the scroll starts at the beginning
   projectGrid.scrollLeft = 0;
-  // Activate the first dot
-  navDots[0].classList.add('active');
+  updateActiveDot(0);
 });
+
+
+
+
+
+
+
 
