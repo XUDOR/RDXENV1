@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function getCurrentIndex() {
     const projectItemWidth = projects[0].offsetWidth;
     const adjustedScrollLeft = projectGrid.scrollLeft + (projectGrid.offsetWidth / 2);
-    const currentIndex = Math.floor(adjustedScrollLeft / projectItemWidth);
+    const currentIndex = Math.round(adjustedScrollLeft / projectItemWidth);
     console.log(`Current index calculated: ${currentIndex}, scrollLeft: ${projectGrid.scrollLeft}, adjustedScrollLeft: ${adjustedScrollLeft}, projectItemWidth: ${projectItemWidth}`);
     return currentIndex;
   }
@@ -232,9 +232,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  projectGrid.scrollLeft = 0;
-  updateActiveDot(0);
+  // Ensure initial state
+  function initialize() {
+    // Scroll to the first project and activate the first dot
+    scrollToProject(0);
+    updateActiveDot(0);
+  }
+
+  initialize();
 });
+
 
 
 
