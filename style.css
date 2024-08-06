@@ -81,14 +81,15 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: left;
   border: 1px solid #225f6e;
-  
   color: #c4e4e8;
-  height: auto;
-  width: 95vw;
-  padding: 5px;
-  margin: 7px;
-
+  min-height: 100px; /* Adjust this value as needed */
+  width: 95%;
+  max-width: 600px; /* Adjust this value as needed */
+  padding: 15px;
+  margin: 15px auto;
+  box-sizing: border-box;
 }
 
 
