@@ -14,6 +14,7 @@ h2{
 .title {
   border-bottom: 1px solid #225f6e ;
   padding-bottom: 5px;
+  margin: 0px;
 }
 
 p {
@@ -68,6 +69,31 @@ header {
 }
 
 /* ++++++++++++++++++++++++++project section */
+
+
+
+.ProjHead {
+  margin-top: 7px;
+}
+
+.ProjInfo-IP {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #225f6e;
+  
+  color: #c4e4e8;
+  height: auto;
+  width: 95vw;
+  padding: 5px;
+  margin: 7px;
+
+}
+
+
+
+
 /* Project section */
 .project-grid {
   display: flex;
