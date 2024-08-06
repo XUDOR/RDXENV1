@@ -175,13 +175,14 @@ document.addEventListener('DOMContentLoaded', () => {
   function getCurrentIndex() {
     const projectItemWidth = projects[0].offsetWidth;
     const adjustedScrollLeft = projectGrid.scrollLeft + (projectGrid.offsetWidth / 2);
-    const currentIndex = Math.round(adjustedScrollLeft / projectItemWidth);
+    const currentIndex = Math.round(adjustedScrollLeft / projectItemWidth) - 1;
     console.log(`Current index calculated: ${currentIndex}, scrollLeft: ${projectGrid.scrollLeft}, adjustedScrollLeft: ${adjustedScrollLeft}, projectItemWidth: ${projectItemWidth}`);
-    return currentIndex;
+    return Math.max(0, currentIndex); // Ensure the index does not go below 0
   }
 
   projectGrid.addEventListener('scroll', () => {
     const index = getCurrentIndex();
+    console.log(`Scroll event: new index is ${index}`);
     updateActiveDot(index);
   });
 
@@ -241,6 +242,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initialize();
 });
+
+
+
 
 
 

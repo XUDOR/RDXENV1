@@ -6,19 +6,20 @@ body {
   color: #ebefdf;
 }
 
- h2{ 
+h2{ 
   font-weight: 300;
   font-size: 1.2rem;
- }
+}
 
- .title {
+.title {
   border-bottom: 1px solid #225f6e ;
   padding-bottom: 5px;
- }
- p {
+}
+
+p {
   font-weight: 300;
   font-size: .8rem;
- }
+}
 
 header {
   display: grid;
@@ -54,7 +55,6 @@ header {
   display: block; 
 }
 
-/* ===================NAV */
 .nav a:hover {
   color: #a0c0c0; 
 }
@@ -142,8 +142,6 @@ header {
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>RESPONSIVE--MOBILE--TABLET */
-
-
 @media (min-width: 768px) {
   .project-item {
     width: 45vw; /* Adjust for larger screens */
@@ -152,8 +150,6 @@ header {
 }
 
 /* ++++++++++++++++++++++++++FOOTER section */
-
 footer {
   background-color: #184551;
-
 }
