@@ -6,13 +6,13 @@ body {
   color: #ebefdf;
 }
 
-h2{ 
+h2 {
   font-weight: 300;
   font-size: 1.2rem;
 }
 
 .title {
-  border-bottom: 1px solid #225f6e ;
+  border-bottom: 1px solid #225f6e;
   padding-bottom: 5px;
   margin: 0px;
 }
@@ -24,7 +24,8 @@ p {
 
 header {
   display: grid;
-  grid-template-columns: 1fr; /* This creates a single column */
+  grid-template-columns: 1fr;
+  /* This creates a single column */
   background-color: #225f6e;
 }
 
@@ -32,7 +33,8 @@ header {
   display: grid;
   grid-template-columns: auto auto auto;
   justify-content: start;
-  gap: 20px; /* Adjust this value to control space between items */
+  gap: 20px;
+  /* Adjust this value to control space between items */
   border: 1px solid #ceddc2;
   padding: 5px;
 }
@@ -40,7 +42,8 @@ header {
 .nav ul {
   display: grid;
   grid-template-columns: repeat(3, auto);
-  gap: 20px; /* Adjust this value to control space between items */
+  gap: 20px;
+  /* Adjust this value to control space between items */
   padding: 0;
   list-style-type: none;
 }
@@ -50,27 +53,25 @@ header {
 }
 
 .nav a {
-  color: #829d9e; 
-  text-decoration: none; 
-  padding: 10px 15px; 
-  display: block; 
+  color: #829d9e;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
 }
 
 .nav a:hover {
-  color: #a0c0c0; 
+  color: #a0c0c0;
 }
 
 .nav a:active {
-  color: #608080; 
+  color: #608080;
 }
 
 .nav a:visited {
-  color: #708090; 
+  color: #708090;
 }
 
 /* ++++++++++++++++++++++++++project section */
-
-
 
 .ProjHead {
   margin-top: 7px;
@@ -84,11 +85,10 @@ header {
   text-align: left;
   border: 1px solid #225f6e;
   color: #c4e4e8;
-  min-height: 100px; /* Adjust this value as needed */
-  width: 95%;
-  max-width: 600px; /* Adjust this value as needed */
-  padding: 15px;
-  margin: 15px auto;
+  width: 95%; /* Adjusted for mobile */
+  max-width: 600px;
+  padding: 10px; /* Adjusted for mobile */
+  margin: 10px auto; /* Adjusted for mobile */
   box-sizing: border-box;
 }
 
@@ -109,8 +109,8 @@ header {
 
 .project-item {
   flex: 0 0 auto;
-  width: 98vw; /* Use viewport width for responsiveness */
-  max-width: 500px; /* Adjust this value as needed */
+  width: 98vw; /* Use viewport width for responsiveness on mobile */
+  max-width: 500px;
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
@@ -142,6 +142,7 @@ header {
 .project-grid::-webkit-scrollbar {
   display: none;
 }
+
 .project-grid {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -171,10 +172,19 @@ header {
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>RESPONSIVE--MOBILE--TABLET */
 @media (min-width: 768px) {
   .project-item {
-    width: 45vw; /* Adjust for larger screens */
-    max-width: 600px; /* Increase max-width for larger screens */
+    width: 45vw;
+    max-width: 600px;
+  }
+  
+  .ProjInfo-IP {
+    width: 90%;
+    padding: 15px;
+    margin: 15px auto;
+    text-align: center;
   }
 }
+
+
 
 /* ++++++++++++++++++++++++++FOOTER section */
 footer {
