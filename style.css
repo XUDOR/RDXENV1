@@ -78,39 +78,90 @@ header {
 
 .IPCont {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two equal columns */
-  gap: 20px; /* Space between the logo and the text */
-  align-items: center; /* Vertical alignment */
-  margin: 20px 0; /* Add some space around the container */
+  grid-template-columns: 1fr 1fr 1fr;
+  /* Two equal columns */
+  gap: 5px;
+  /* Space between the logo and the text */
+  align-items: center;
+  /* Vertical alignment */
+  margin: 20px 0;
+  /* Add some space around the container */
 }
 
 
 .projTitle {
   border: 1px solid #225f6e;
+  padding-bottom: 3px;
+  font-weight: 300;
+  font-size: .8rem;
+  text-align: left;
 
 }
 
 .projCopy {
   border: 1px solid #225f6e;
-
-
+  font-weight: 300;
+  font-size: .8rem;
+  text-align: left;
 }
-.IP-brand,
+
 .ProjInfo-IP {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border: 1px solid #225f6e;
-  height: 100px; /* Set equal height for both containers */
+  height: 100px;
+  /* Set equal height for both containers */
 }
 
+.IP-brand {
+  display: flex;
+  justify-content: flex-start;
+  /* Align the logo to the left */
+  align-items: center;
+  padding-left: 10px;
+  /* Add some padding for better spacing */
+  border: 1px solid #225f6e;
+  height: 100px;
+  /* Set the height */
+}
 
 .IP-brand img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
 }
+
+.ProjLinks {
+  height: 100px;
+  border: 1px solid #225f6e;
+
+}
+
+.ProjLinks-title {
+  font-weight: 300;
+  font-size: .9rem;
+  text-align: left;
+  border-bottom: 1px solid #225f6e;
+  width:40%;
+  padding: 3px;
+  margin-bottom: 3px;
+
+}
+
+.ProjLinks-link1-app, 
+.ProjLinks-link2-film1,
+.ProjLinks-link3-film2 {
+  
+  padding: 5px;
+  font-weight: 300;
+  font-size: .7rem;
+  text-align: left;
+
+}
+
+
 
 
 /* Project section */
@@ -127,7 +178,8 @@ header {
 
 .project-item {
   flex: 0 0 auto;
-  width: 98vw; /* Use viewport width for responsiveness on mobile */
+  width: 98vw;
+  /* Use viewport width for responsiveness on mobile */
   max-width: 500px;
   scroll-snap-align: start;
   display: flex;
@@ -193,7 +245,7 @@ header {
     width: 45vw;
     max-width: 600px;
   }
-  
+
   .ProjInfo-IP {
     width: 90%;
     padding: 15px;
