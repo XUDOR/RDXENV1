@@ -72,27 +72,45 @@ header {
 }
 
 /* ++++++++++++++++++++++++++project section */
-
 .ProjHead {
   margin-top: 7px;
 }
 
-.ProjInfo-IP {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: left;
-  border: 1px solid #225f6e;
-  color: #c4e4e8;
-  width: 95%; /* Adjusted for mobile */
-  max-width: 600px;
-  padding: 10px; /* Adjusted for mobile */
-  margin: 10px auto; /* Adjusted for mobile */
-  box-sizing: border-box;
+.IPCont {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 20px; /* Space between the logo and the text */
+  align-items: center; /* Vertical alignment */
+  margin: 20px 0; /* Add some space around the container */
 }
 
 
+.projTitle {
+  border: 1px solid #225f6e;
+
+}
+
+.projCopy {
+  border: 1px solid #225f6e;
+
+
+}
+.IP-brand,
+.ProjInfo-IP {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #225f6e;
+  height: 100px; /* Set equal height for both containers */
+}
+
+
+.IP-brand img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
 
 
 /* Project section */
