@@ -18,6 +18,7 @@ h2 {
 }
 
 p {
+  padding: 5px;
   font-weight: 300;
   font-size: .8rem;
 }
@@ -89,7 +90,8 @@ header {
 
 
 .projTitle {
-  border: 1px solid #225f6e;
+  border-bottom: 1px solid #225f6e;
+  color: lightblue;
   padding-bottom: 3px;
   margin-bottom: 5px;
   font-weight: 300;
@@ -99,9 +101,9 @@ header {
 }
 
 .projCopy {
-  border: 1px solid #225f6e;
+  color: #829d9e;
   font-weight: 300;
-  font-size: .8rem;
+  font-size: .9rem;
   text-align: left;
 }
 
@@ -109,7 +111,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  border: 1px solid #225f6e;
+  border-left: 1px solid #225f6e;
   padding: 5px;
   height: 90px;
   /* Set equal height for both containers */
@@ -130,7 +132,7 @@ header {
   padding-left: 5px;
   padding-right: 5px;
   margin-right: 10px;
-  border: 1px solid #225f6e;  /* Optional: keep or adjust this */
+  
 }
 
 .IP-brand img {
@@ -141,7 +143,7 @@ header {
 
 .ProjLinks {
   height: 100px;
-  border: 1px solid #225f6e;
+  border-left: 1px solid #225f6e;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -152,6 +154,7 @@ header {
   font-weight: 300;
   font-size: .9rem;
   text-align: left;
+  align-items: start;
   border-bottom: 1px solid #225f6e;
   width:100px;
   padding: 3px;
@@ -162,15 +165,22 @@ header {
 .ProjLinks-link1-app, 
 .ProjLinks-link2-film1,
 .ProjLinks-link3-film2 {
-  
   padding: 5px;
-  font-weight: 300;
+  margin-bottom: 3px;
+  font-weight: 200;
   font-size: .7rem;
   text-align: left;
+  cursor: pointer;
 
 }
 
+.ProjLinks-link1-app:hover, 
+.ProjLinks-link2-film1:hover,
+.ProjLinks-link3-film2:hover {
+  color: #27332d;
+  background-color: #a0c0c0;
 
+}
 /* Project section */
 .project-grid {
   display: flex;
@@ -264,16 +274,23 @@ header {
 
   .ProjLinks {
     grid-area: links; /* Assign links area */
-    width: 80%;
+    width: 85%;
+
+  }
+
+  .ProjLinks-title {
+    padding: 1px;
+
+    align-items: start;
   }
 
   .ProjInfo-IP {
     grid-area: info; /* Assign info area */
-    width: 100%; /* Ensure it spans full width */
+    width: 93%; /* Ensure it spans full width */
     
   }
 
-  .IP-brand, .ProjLinks, .ProjInfo-IP {
+  .IP-brand, .ProjInfo-IP {
     height: auto; /* Allow containers to adjust height automatically */
     padding: 10px;
   }
