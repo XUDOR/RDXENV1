@@ -78,14 +78,10 @@ header {
 
 .IPCont {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  /* Two equal columns */
+  grid-template-columns: 20% 40% 40%; /* Three columns: 20% for logo, 40% for info, 40% for links */
   gap: 5px;
-  /* Space between the logo and the text */
   align-items: center;
-  /* Vertical alignment */
   margin: 20px 0;
-  /* Add some space around the container */
 }
 
 
@@ -108,23 +104,20 @@ header {
 .ProjInfo-IP {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   border: 1px solid #225f6e;
-  height: 100px;
+  padding: 10px;
+  height: 120px;
   /* Set equal height for both containers */
 }
 
 .IP-brand {
   display: flex;
   justify-content: flex-start;
-  /* Align the logo to the left */
   align-items: center;
   padding-left: 10px;
-  /* Add some padding for better spacing */
   border: 1px solid #225f6e;
-  height: 100px;
-  /* Set the height */
+  height: 120px;
 }
 
 .IP-brand img {
@@ -136,7 +129,9 @@ header {
 .ProjLinks {
   height: 100px;
   border: 1px solid #225f6e;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .ProjLinks-title {
@@ -144,7 +139,7 @@ header {
   font-size: .9rem;
   text-align: left;
   border-bottom: 1px solid #225f6e;
-  width:40%;
+  width:100px;
   padding: 3px;
   margin-bottom: 3px;
 
@@ -240,17 +235,25 @@ header {
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>RESPONSIVE--MOBILE--TABLET */
-@media (min-width: 768px) {
+@media (ma-width: 768px) {
+  .IPCont {
+    grid-template-columns: 1fr; /* Stack the columns vertically on smaller screens */
+    gap: 10px;
+  }
   .project-item {
     width: 45vw;
     max-width: 600px;
   }
 
-  .ProjInfo-IP {
-    width: 90%;
+  .IP-brand, .ProjInfo-IP, .ProjLinks {
+    width: 100%;
+    height: auto; /* Allow containers to adjust height automatically */
     padding: 15px;
-    margin: 15px auto;
-    text-align: center;
+  }
+
+  .IP-brand img {
+    width: 80px; /* Adjust the size of the logo for smaller screens */
+    height: 80px; /* Adjust the size of the logo for smaller screens */
   }
 }
 
