@@ -78,16 +78,18 @@ header {
 
 .IPCont {
   display: grid;
-  grid-template-columns: 20% 40% 40%; /* Three columns: 20% for logo, 40% for info, 40% for links */
-  gap: 5px;
+  grid-template-columns: 220px auto auto; /* First column fixed for the logo, others flexible */
+  gap: 15px;
   align-items: center;
-  margin: 20px 0;
+  margin: 10px 0;
 }
+
 
 
 .projTitle {
   border: 1px solid #225f6e;
   padding-bottom: 3px;
+  margin-bottom: 5px;
   font-weight: 300;
   font-size: .8rem;
   text-align: left;
@@ -106,24 +108,25 @@ header {
   flex-direction: column;
   justify-content: center;
   border: 1px solid #225f6e;
-  padding: 10px;
-  height: 120px;
+  padding: 5px;
+  height: 90px;
   /* Set equal height for both containers */
 }
 
 .IP-brand {
+  width: 220px;  /* Fixed width for the logo container */
+  height: 100px; /* Fixed height for the logo container */
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   padding-left: 10px;
-  border: 1px solid #225f6e;
-  height: 120px;
+  border: 1px solid #225f6e;  /* Optional: keep or adjust this */
 }
 
 .IP-brand img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+  width: 100%;  /* The logo will fit within the fixed container */
+  height: 100%;
+  object-fit: contain; /* Ensures the SVG scales within the container without distortion */
 }
 
 .ProjLinks {
@@ -155,8 +158,6 @@ header {
   text-align: left;
 
 }
-
-
 
 
 /* Project section */
