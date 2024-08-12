@@ -1,123 +1,123 @@
 // Array of project data
 const projectsData = [
   {
-    description: "Interstellar Packges | Charoltta | 2005/2010",
+    description: "Interstellar Packages | Charoltta | 2005/2010",
     imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Charlotta/1_CHARLOTTA.png",
-    altText: "Interstellar Packges-Charlotta"
+    altText: "Interstellar Packages-Charlotta"
   },
 
   {
-    description: "Interstellar Packges | Objects & Particles | 2006/2010 ",
+    description: "Interstellar Packages | Objects & Particles | 2006/2010 ",
     imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Objects-and-Particles/2_OBJECTS-PARTICLES.png",
-    altText: "Interstellar Packges-Objects-and-Particles"
+    altText: "Interstellar Packages-Objects-and-Particles"
   },
 
   {
-    description: "Interstellar Packges | Glass City of Us | 2005/2010 ",
+    description: "Interstellar Packages | Glass City of Us | 2005/2010 ",
     imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Glass-City-of-Us/3_GLASS-CITY-OF-US.png",
-    altText: "Interstellar Packges-Glass-CIty-of-Us"
+    altText: "Interstellar Packages-Glass-CIty-of-Us"
   },
 
   {
-    description: "Interstellar Packges | New Domes of Earth | 2005/2010 ",
+    description: "Interstellar Packages | New Domes of Earth | 2005/2010 ",
     imageUrl: "https://storage.googleapis.com/ip-public-bucket1/New-Domes-of-Earth/4_NEW-DOMES.png",
-    altText: "Interstellar Packges-New-Domes-of-Earth"
+    altText: "Interstellar Packages-New-Domes-of-Earth"
   },
 
   {
-    description: "Interstellar Packges | Natura | 2022 ",
+    description: "Interstellar Packages | Natura | 2022 ",
     imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Natura/5_NATURA.png",
-    altText: "Interstellar Packges-Natura"
+    altText: "Interstellar Packages-Natura"
   },
 
   {
-    description: "Interstellar Packges | Outer Corners | 2022 ",
+    description: "Interstellar Packages | Outer Corners | 2022 ",
     imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Outer-Corners/6_OUTER-CORNERS.png",
-    altText: "Interstellar Packges-Outer-Corners"
+    altText: "Interstellar Packages-Outer-Corners"
   },
 
   {
-    description: "Interstellar Packges | Nonagon | 2022",
+    description: "Interstellar Packages | Nonagon | 2022",
     imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Nonagon/7_NONAGON.png",
-    altText: "Interstellar Packges-Nonagon"
+    altText: "Interstellar Packages-Nonagon"
   },
 
   {
-    description: "Interstellar Packges | Ambient Garden One | 2022",
+    description: "Interstellar Packages | Ambient Garden One | 2022",
     imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Ambient-Garden-One/8_AMBIENTGARDENONE.png",
-    altText: "Interstellar Packges-Ambient-Garden-One"
+    altText: "Interstellar Packages-Ambient-Garden-One"
   },
 
   {
-    description: "Interstellar Packges | Music for Seven Structures | 2022",
+    description: "Interstellar Packages | Music for Seven Structures | 2022",
     imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Music-For-Seven-Structures/9_7STRUCTURES.png",
-    altText: "Interstellar Packges-Music-for-Seven-Structures"
+    altText: "Interstellar Packages-Music-for-Seven-Structures"
   },
 
   {
-    description: "Interstellar Packges | Inner Moments of Light | 2022",
+    description: "Interstellar Packages | Inner Moments of Light | 2022",
     imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Inner-Moment-of-Light/10_INNER-MOMENTS.png",
-    altText: "Interstellar Packges-Inner-Moments-of-Light"
+    altText: "Interstellar Packages-Inner-Moments-of-Light"
   },
 
   {
-    description: "Interstellar Packges | Nocturnes & Reveries | 2022",
+    description: "Interstellar Packages | Nocturnes & Reveries | 2022",
     imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Nocturnes-and-Reveries/11_NOCTURNES-REVERIES.png",
-    altText: "Interstellar Packges-Nocturnes-and-Reveries"
+    altText: "Interstellar Packages-Nocturnes-and-Reveries"
   },
 
   {
-    description: "Interstellar Packges | Prefabrication | 2023",
+    description: "Interstellar Packages | Prefabrication | 2023",
     imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Prefabrication/12_PREFABRICATION.png",
-    altText: "Interstellar Packges-Prefabrication"
+    altText: "Interstellar Packages-Prefabrication"
   },
 
   {
-    description: "Interstellar Packges | Vagary | 2023",
+    description: "Interstellar Packages | Vagary | 2023",
     imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Vagary/13_VAGARY.png",
-    altText: "Interstellar Packges-Vagary"
+    altText: "Interstellar Packages-Vagary"
   },
 
   {
     description: "Interstellar Packges | Amsterdam Concreet | 2023",
     imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Amsterdam-Concreet/14_AMSTERDAM-CONCREET.png",
-    altText: "Interstellar Packges-Amsterdam-Concreet"
+    altText: "Interstellar Packages-Amsterdam-Concreet"
   },
 
   {
-    description: "Interstellar Packges | Watercolours for Friends | 2023",
+    description: "Interstellar Packages | Watercolours for Friends | 2023",
     imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Watercolours-for-Friends/15_WATERCOLOURS.png",
-    altText: "Interstellar Packges-Watercolours for Friends"
+    altText: "Interstellar Packages-Watercolours for Friends"
   },
 
   {
-    description: "Interstellar Packges | Postcards from Old Sounds | 2023",
+    description: "Interstellar Packages | Postcards from Old Sounds | 2023",
     imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Postcards-From-Old-Sounds/16_POSTACARDS-OLD-SOUNDS.png",
-    altText: "Interstellar Packges-Postcards from Old Sounds"
+    altText: "Interstellar Packages-Postcards from Old Sounds"
   },
 
   {
-    description: "Interstellar Packges | Sakura | 2023",
+    description: "Interstellar Packages | Sakura | 2023",
     imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Sakura/17_SAKURA.png",
-    altText: "Interstellar Packges-Sakura"
+    altText: "Interstellar Packages-Sakura"
   },
 
   {
-    description: "Interstellar Packges | Poem for a Homewolrd | 2023",
+    description: "Interstellar Packages | Poem for a Homewolrd | 2023",
     imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Poem-For-A-Homeworld/18_POEM-HOMEWORLD.png",
-    altText: "Interstellar Packges-Poem-for-a-Homewolrd"
+    altText: "Interstellar Packages-Poem-for-a-Homewolrd"
   },
 
   {
-    description: "Interstellar Packges | Rhombus | 2023",
+    description: "Interstellar Packages | Rhombus | 2023",
     imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Rhombus/19_RHOMBUS.png",
-    altText: "Interstellar Packges-Rhombus"
+    altText: "Interstellar Packages-Rhombus"
   },
 
   {
-    description: "Interstellar Packges | Vignettes of Clouds | 2024",
+    description: "Interstellar Packages | Vignettes of Clouds | 2024",
     imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Vignettes-of-Clouds/20_Vignettes-of-Clouds.png",
-    altText: "Interstellar Packges-Vignettes-of-Clouds"
+    altText: "Interstellar Packages-Vignettes-of-Clouds"
   },
 
 
