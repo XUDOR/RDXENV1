@@ -145,6 +145,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: start;
 }
 
 .ProjLinks-title {
@@ -246,46 +247,44 @@ header {
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>RESPONSIVE--MOBILE--TABLET */
-@media (ma-width: 768px) {
+@media (max-width: 768px) {
   .IPCont {
-    grid-template-columns: 1fr; /* Stack the columns vertically on smaller screens */
+    display: grid;
+    grid-template-columns: 50% 50%; /* 70/30 split for brand and links */
     grid-template-areas: 
-      "brand"
-      "links"
-      "info"; /* Change order: brand, then links, then info */
+      "brand links"
+      "info info"; /* Info takes up 100% width below */
     gap: 10px;
   }
 
   .IP-brand {
     grid-area: brand; /* Assign brand area */
+    width: 90%;
   }
 
   .ProjLinks {
     grid-area: links; /* Assign links area */
+    width: 80%;
   }
 
   .ProjInfo-IP {
     grid-area: info; /* Assign info area */
+    width: 100%; /* Ensure it spans full width */
+    
   }
 
-
-  .IP-brand, .ProjInfo-IP, .ProjLinks {
-    width: 100%;
+  .IP-brand, .ProjLinks, .ProjInfo-IP {
     height: auto; /* Allow containers to adjust height automatically */
-    padding: 15px;
+    padding: 10px;
   }
 
   .IP-brand img {
-    width: 80px; /* Adjust the size of the logo for smaller screens */
-    height: 80px; /* Adjust the size of the logo for smaller screens */
+    width: 100%; /* Keep the logo responsive within its container */
+    height: auto;
   }
 }
 
 
-.project-item {
-  width: 45vw;
-  max-width: 600px;
-}
 
 /* ++++++++++++++++++++++++++FOOTER section */
 footer {
