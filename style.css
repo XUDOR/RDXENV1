@@ -80,8 +80,10 @@ header {
   display: grid;
   grid-template-columns: 230px auto auto; /* First column fixed for the logo, others flexible */
   gap: 5px;
-  align-items: center;
+  align-items: start;
   margin: 10px 0;
+  overflow: hidden;
+  height: auto; /* Allow the container to grow as needed */
 }
 
 
@@ -111,6 +113,12 @@ header {
   padding: 5px;
   height: 90px;
   /* Set equal height for both containers */
+}
+
+.ProjInfo-IP,
+.ProjLinks {
+  height: auto; /* Let the height adjust automatically based on content */
+  padding: 5px;
 }
 
 .IP-brand {
@@ -241,12 +249,25 @@ header {
 @media (ma-width: 768px) {
   .IPCont {
     grid-template-columns: 1fr; /* Stack the columns vertically on smaller screens */
+    grid-template-areas: 
+      "brand"
+      "links"
+      "info"; /* Change order: brand, then links, then info */
     gap: 10px;
   }
-  .project-item {
-    width: 45vw;
-    max-width: 600px;
+
+  .IP-brand {
+    grid-area: brand; /* Assign brand area */
   }
+
+  .ProjLinks {
+    grid-area: links; /* Assign links area */
+  }
+
+  .ProjInfo-IP {
+    grid-area: info; /* Assign info area */
+  }
+
 
   .IP-brand, .ProjInfo-IP, .ProjLinks {
     width: 100%;
@@ -261,6 +282,10 @@ header {
 }
 
 
+.project-item {
+  width: 45vw;
+  max-width: 600px;
+}
 
 /* ++++++++++++++++++++++++++FOOTER section */
 footer {
