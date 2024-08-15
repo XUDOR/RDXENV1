@@ -309,7 +309,7 @@ header {
 
   .ProjLinks-link1-app a {
     display: block; /* Make the link a block-level element */
-    padding: 15px 10px; /* Increase padding for easier touch interaction */
+    padding: 10px 5px; /* Increase padding for easier touch interaction */
     text-align: center; /* Center the text */
     width: 100%; /* Make the link take up the full width */
     box-sizing: border-box; /* Ensure padding is within width */
