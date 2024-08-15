@@ -313,9 +313,23 @@ header {
     text-align: center; /* Center the text */
     width: 100%; /* Make the link take up the full width */
     box-sizing: border-box; /* Ensure padding is within width */
+    color: lightblue; /* Set the link color */
   }
 
-  
+  .ProjLinks-link1-app a:visited {
+    color: #b1d235; /* Ensure the visited state is the same as the default */
+  }
+
+  .ProjLinks-link1-app a:hover {
+    color: #27332d; /* Change this to your desired hover color */
+    background-color: #a0c0c0; /* Keep the existing background color on hover */
+  }
+
+  .ProjLinks-link1-app a:active {
+    color: #ffcc00; /* Change this to your desired active color */
+  }
+
+
   .ProjInfo-IP {
     grid-area: info; /* Assign info area */
     width: 93%; /* Ensure it spans full width */
