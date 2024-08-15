@@ -311,7 +311,6 @@ header {
     display: block; /* Make the link a block-level element */
     text-align: center; /* Center the text */
     width: 100%; /* Make the link take up the full width */
-    box-sizing: border-box; /* Ensure padding is within width */
     color: lightblue; /* Set the link color */
   }
 
