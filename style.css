@@ -163,8 +163,9 @@ header {
 }
 
 .ProjLinks-link1-app a {
-  color: #ffffff; /* Change this to your desired link color */
-  text-decoration: none; /* Remove underline if needed */
+  color: inherit; /* Keep the current text color */
+  text-decoration: none; /* No underline */
+  cursor: pointer;
 }
 
 .ProjLinks-link1-app a:hover {
@@ -302,10 +303,19 @@ header {
 
   .ProjLinks-title {
     padding: 1px;
-
     align-items: start;
   }
 
+
+  .ProjLinks-link1-app a {
+    display: block; /* Make the link a block-level element */
+    padding: 15px 10px; /* Increase padding for easier touch interaction */
+    text-align: center; /* Center the text */
+    width: 100%; /* Make the link take up the full width */
+    box-sizing: border-box; /* Ensure padding is within width */
+  }
+
+  
   .ProjInfo-IP {
     grid-area: info; /* Assign info area */
     width: 93%; /* Ensure it spans full width */
