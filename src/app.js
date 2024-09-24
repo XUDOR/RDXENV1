@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 // Routes
 app.use('/api', routes);
 
-// Serve static files (your SPA)
+// Serve static files (everything in 'public' is automatically served)
 app.use(express.static('public'));
 
 // Error handling middleware
