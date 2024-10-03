@@ -73,6 +73,39 @@ header {
 }
 
 /* ++++++++++++++++++++++++++project section */
+
+.ClientNavCont {
+  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+
+}
+
+.CLientProjNAv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+
+}
+
+.Client1, .Client2, .Client3 {
+  display: flex;
+  margin: 2px;
+  margin-bottom: 5px;
+  width: 25px;
+  height: 25px;
+  background-color: #225f6e;
+  cursor: pointer;
+}
+
+.Client1:hover, .Client2:hover, .Client3:hover {
+  background-color: #ebefdf;
+}
+
+
 .ProjHead {
   margin-top: 7px;
 }
