@@ -74,6 +74,11 @@ header {
 
 /* ++++++++++++++++++++++++++project section */
 
+.divider {
+
+  height: 1em;
+}
+
 .ClientNavCont {
   
   display: flex;
