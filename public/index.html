@@ -20,12 +20,14 @@
     <nav class="nav">
       <ul>
         <li><a href="#about">About</a></li>
-        <li><a href="#projects">Project | Clients</a></li>
+        <li><a href="#projects">Projects | Clients</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
+  
   <main>
+    <!-- About Section -->
     <section id="about">
       <h2>About:</h2>
       <p>
@@ -47,6 +49,7 @@
       </p>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects">
       <div class="ClientNavCont">
         <h2 class="title">Projects | Clients</h2>
@@ -56,59 +59,117 @@
           <div class="Client3"></div>
         </div>
       </div>
-      <h4 class="ProjHead">Interstellar Packages</h4>
-      <div class="IPCont">
-        <div class="IP-brand">
-          <img src="/assets/images/IP_LOGO-aug24.svg" alt="Interstellar Packages Logo">
 
-
-
-        </div>
-        <div class="ProjInfo-IP">
-          <div class="projTitle">Experimental Ambient Label | 2003 - Present</div>
-          <div class="projCopy">
-            Innovative ambient music label with 20 self-produced albums, featuring custom-designed covers and
-            typography.
-            Created videos including "Films of Nature" and "Tidal." Developed label/store platform using HTML, CSS,
-            JavaScript, React, Node.js, Express.js, PostgreSQL, and Google Cloud for content delivery. Implemented
-            version
-            control with Git and GitHub, deploying the backend on Render and the frontend on Netlify.</div>
-        </div>
-        <div class="ProjLinks">
-          <div class="ProjLinks-title">Project Links</div>
-          <div class="ProjLinks-link1-app">
-
-            <a href="https://interstellar-packages.netlify.app/" target="_blank">
-              Site/App
-            </a>
-          </div>
-
-
-          <div class="ProjLinks-link2-film1">FIlms of Nature</div>
-          <div class="ProjLinks-link3-film2">Tidal</div>
-        </div>
-
-
-
+      <!-- Container for dynamic client content -->
+<!-- Container for dynamic client content -->
+<div id="client-container">
+  <!-- Interstellar Packages -->
+  <div class="client">
+    <h4 class="ProjHead">Interstellar Packages</h4>
+    <div class="IPCont">
+      <div class="IP-brand">
+        <img src="/assets/images/IP_LOGO-aug24.svg" alt="Interstellar Packages Logo">
       </div>
-
-
-      <div class="project-grid">
-        <!-- This will be populated by JavaScript -->
+      <div class="ProjInfo-IP">
+        <div class="projTitle">Experimental Ambient Label | 2003 - Present</div>
+        <div class="projCopy">
+          Innovative ambient music label with 20 self-produced albums, featuring custom-designed covers and typography.
+          Created videos including "Films of Nature" and "Tidal." Developed label/store platform using HTML, CSS,
+          JavaScript, React, Node.js, Express.js, PostgreSQL, and Google Cloud for content delivery. Implemented
+          version control with Git and GitHub, deploying the backend on Render and the frontend on Netlify.
+        </div>
       </div>
-      <div class="project-nav">
-        <!-- This will be populated by JavaScript -->
+      <div class="ProjLinks">
+        <div class="ProjLinks-title">Project Links</div>
+        <div class="ProjLinks-link1-app">
+          <a href="https://interstellar-packages.netlify.app/" target="_blank">Site/App</a>
+        </div>
+        <div class="ProjLinks-link2-film1">Films of Nature</div>
+        <div class="ProjLinks-link3-film2">Tidal</div>
       </div>
-    </section>
+    </div>
+    <div class="project-grid">
+      <!-- Populated dynamically by script.js -->
+    </div>
+    <div class="project-nav">
+      <!-- Populated dynamically by script.js -->
+    </div>
+  </div>
 
+  
+  <span class="divider"></span>
+
+
+
+  <!-- Lynn Demers (example placeholder, you will populate this) -->
+  <div class="client">
+    <h4 class="ProjHead">Lynn Demers</h4>
+    <div class="IPCont">
+      <div class="IP-brand">
+        <img src="/assets/images/LD_LOGO24.svg" alt="Lynn Demers Logo">
+      </div>
+      <div class="ProjInfo-IP">
+        <div class="projTitle">Fine Art Collection | 2010 - Present</div>
+        <div class="projCopy">
+          <!-- Replace with actual content -->
+          Placeholder description for Lynn Demers' collection.
+        </div>
+      </div>
+      <div class="ProjLinks">
+        <div class="ProjLinks-title">Project Links</div>
+        <div class="ProjLinks-link1-app">
+          <a href="#" target="_blank">Art Portfolio</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tanya Slingsby (example placeholder, you will populate this) -->
+  <div class="client">
+    <h4 class="ProjHead">Tanya Slingsby</h4>
+    <div class="IPCont">
+      <div class="IP-brand">
+        <img src="/assets/images/Tanya_Slingsby_Logo.svg" alt="Tanya Slingsby Logo">
+      </div>
+      <div class="ProjInfo-IP">
+        <div class="projTitle">Contemporary Artwork | 2015 - Present</div>
+        <div class="projCopy">
+          <!-- Replace with actual content -->
+          Placeholder description for Tanya Slingsby's contemporary artwork project.
+        </div>
+      </div>
+      <div class="ProjLinks">
+        <div class="ProjLinks-title">Project Links</div>
+        <div class="ProjLinks-link1-app">
+          <a href="#" target="_blank">Online Gallery</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+    
+
+    <!-- Contact Section -->
     <section id="contact">
       <h2>Contact ></h2>
-      <!-- ADD CONTACT INFO HERE-->
+      <!-- ADD CONTACT INFO HERE -->
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2024 Roderick Shoolbraid. All rights reserved. </p>
+    <p>&copy; 2024 Roderick Shoolbraid. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
