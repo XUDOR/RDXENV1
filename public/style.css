@@ -75,9 +75,13 @@ header {
 /* ++++++++++++++++++++++++++project section */
 
 .divider {
-
-  height: 1em;
+  display: block;
+  height: .8em; /* Adjust the height as needed to provide enough space */
+  width: 100%; /* Make sure it takes up the full width */
+  background-color: #27332d; /* Optional: to match your background color for consistency */
+  margin: 20px 0; /* Add some vertical spacing */
 }
+
 
 .ClientNavCont {
   
@@ -115,7 +119,10 @@ header {
   margin-top: 7px;
 }
 
-.IPCont {
+.IPCont,
+.LDCont,
+.TSCont
+{
   display: grid;
   grid-template-columns: 230px auto auto; /* First column fixed for the logo, others flexible */
   gap: 5px;
@@ -180,7 +187,7 @@ header {
 }
 
 .ProjLinks {
-  height: 100px;
+  height: 150px;
   border-left: 1px solid #225f6e;
   display: flex;
   flex-direction: column;
@@ -223,9 +230,17 @@ header {
 
 
 
-.ProjLinks-link1-app, 
+
+.ProjLinks-link1-app,
+.ProjLinks-link7-app2,
+.ProjLinks-link9-app3,
 .ProjLinks-link2-film1,
-.ProjLinks-link3-film2 {
+.ProjLinks-link3-film2,
+.ProjLinks-link4-film3,
+.ProjLinks-link5-film4,
+.ProjLinks-link6-film5,
+.ProjLinks-link8-film6
+{
   padding: 5px;
   margin-bottom: 3px;
   font-weight: 200;
@@ -236,8 +251,15 @@ header {
 }
 
 .ProjLinks-link1-app:hover, 
+.ProjLinks-link7-app2:hover,
+.ProjLinks-link9-app3:hover,
 .ProjLinks-link2-film1:hover,
-.ProjLinks-link3-film2:hover {
+.ProjLinks-link3-film2:hover,
+.ProjLinks-link4-film3:hover,
+.ProjLinks-link5-film4:hover,
+.ProjLinks-link6-film5:hover,
+.ProjLinks-link8-film6:hover
+{
   color: #27332d;
   background-color: #a0c0c0;
 
@@ -319,7 +341,11 @@ header {
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>RESPONSIVE--MOBILE--TABLET */
 @media (max-width: 768px) {
-  .IPCont {
+  .IPCont,
+  .LDCont,
+  .TSCont
+  
+  {
     display: grid;
     grid-template-columns: 50% 50%; /* 70/30 split for brand and links */
     grid-template-areas: 
