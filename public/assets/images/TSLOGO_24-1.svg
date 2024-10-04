@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 284.33 72.57">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Avenir-Medium, Avenir;
+        font-size: 17.94px;
+        font-weight: 500;
+      }
+
+      .cls-2 {
+        font-family: Helvetica-Bold, Helvetica;
+        font-size: 46.92px;
+        font-weight: 700;
+        letter-spacing: -.07em;
+      }
+
+      .cls-3 {
+        font-family: Helvetica, Helvetica;
+        font-size: 48px;
+        letter-spacing: -.07em;
+      }
+
+      .cls-4 {
+        letter-spacing: -.07em;
+      }
+
+      .cls-5 {
+        letter-spacing: .02em;
+      }
+    </style>
+  </defs>
+  <g id="Layer_2-2" data-name="Layer_2">
+    <g>
+      <g>
+        <text class="cls-3" transform="translate(0 41.21)"><tspan x="0" y="0">tanya</tspan></text>
+        <text class="cls-2" transform="translate(103.67 41.73) scale(1.08 1)"><tspan x="0" y="0">slingsby</tspan></text>
+      </g>
+      <text class="cls-1" transform="translate(106.7 65.24)"><tspan class="cls-4" x="0" y="0">A</tspan><tspan class="cls-5" x="11.39" y="0">TELIER</tspan></text>
+    </g>
+  </g>
+</svg>
