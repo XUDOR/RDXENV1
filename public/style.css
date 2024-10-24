@@ -42,7 +42,7 @@ header {
 
 .nav ul {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(4, auto);
   gap: 20px;
   /* Adjust this value to control space between items */
   padding: 0;
@@ -225,9 +225,6 @@ header {
 .ProjLinks-link1-app a:visited {
   color: #829d9e; /* Change this to your desired visited color */
 }
-
-
-
 
 
 
