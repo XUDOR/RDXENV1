@@ -1,6 +1,7 @@
 // src/app.js
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const routes = require('./routes');
 
 const app = express();
@@ -10,11 +11,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Routes
-app.use('/api', routes);
+// Serve static files first
+app.use(express.static(path.join(__dirname, '../public')));
 
-// Serve static files (everything in 'public' is automatically served)
-app.use(express.static('public'));
+// Use routes
+app.use('/', routes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {

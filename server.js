@@ -1,6 +1,5 @@
-// src/server.js
-const app = require('./src/app'); // Correct path to app.js
-
+// server.js
+const app = require('./src/app');
 
 const port = process.env.PORT || 3000;
 
