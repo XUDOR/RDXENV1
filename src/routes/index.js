@@ -4,7 +4,8 @@ const router = express.Router();
 const path = require('path');
 
 router.get('/filmography', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../public/filmography.html'));
+  res.redirect('/filmography.html'); // Redirect to the static file
 });
+
 
 module.exports = router;
