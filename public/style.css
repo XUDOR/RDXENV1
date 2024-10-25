@@ -336,6 +336,25 @@ header {
   background-color: #ebefdf;
 }
 
+
+/* Filmography section ++++++++++++++++++++++++++++++++++++++++++++++++*/
+.film-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.film {
+  background-color: #225f6e;
+  padding: 10px;
+  color: #ebefdf;
+}
+
+.film h3 {
+  font-weight: bold;
+}
+
+
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>RESPONSIVE--MOBILE--TABLET */
 @media (max-width: 768px) {
   .IPCont,
