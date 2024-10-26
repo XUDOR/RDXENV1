@@ -1,5 +1,5 @@
-// Array of project data
-const projectsData = [
+// Interstellar Packages project data
+const IP_projectData = [
   {
     description: "Interstellar Packages | Charoltta | 2005/2010",
     imageUrl: "https://storage.googleapis.com/ip-public-bucket1/Charlotta/1_CHARLOTTA.png",
@@ -120,17 +120,52 @@ const projectsData = [
     altText: "Interstellar Packages-Vignettes-of-Clouds"
   },
 
-
-
 ];
 
+// Lynn Demers project data
+const LD_projectData = [
+  {
+    description: "Lynn Demers | Serenity | 2010",
+    imageUrl: "https://example.com/ld-project1.jpg", // Replace with actual URLs
+    altText: "Lynn Demers - Serenity"
+  },
+  {
+    description: "Lynn Demers | Sakura Kimonos | 2012",
+    imageUrl: "https://example.com/ld-project2.jpg",
+    altText: "Lynn Demers - Sakura Kimonos"
+  },
+  {
+    description: "Lynn Demers | Jikan | 2015",
+    imageUrl: "https://example.com/ld-project3.jpg",
+    altText: "Lynn Demers - Jikan"
+  },
+  {
+    description: "Lynn Demers | Value Deck Prototype | 2020",
+    imageUrl: "https://example.com/ld-project4.jpg",
+    altText: "Lynn Demers - Value Deck Prototype"
+  },
+  {
+    description: "Lynn Demers | Placeholder Project 5",
+    imageUrl: "https://example.com/ld-project5.jpg",
+    altText: "Lynn Demers - Project 5"
+  }
+];
 
 document.addEventListener('DOMContentLoaded', () => {
-  const projectGrid = document.querySelector('.project-grid');
-  const projectNav = document.querySelector('.project-nav');
+  // Initialize Interstellar Packages carousel
+  generateCarousel(IP_projectData, '.ip-project-grid', '.ip-project-nav');
+
+  // Initialize Lynn Demers carousel
+  generateCarousel(LD_projectData, '.ld-project-grid', '.ld-project-nav');
+});
+
+// Function to generate a carousel for a client
+function generateCarousel(projectData, gridSelector, navSelector) {
+  const projectGrid = document.querySelector(gridSelector);
+  const projectNav = document.querySelector(navSelector);
 
   // Generate project items
-  projectsData.forEach((project, index) => {
+  projectData.forEach((project, index) => {
     const projectItem = document.createElement('div');
     projectItem.classList.add('project-item');
     projectItem.innerHTML = `
@@ -145,19 +180,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const dot = document.createElement('div');
     dot.classList.add('nav-dot');
     dot.addEventListener('click', () => {
-      console.log(`Nav dot clicked: ${index}`);
-      scrollToProject(index);
+      scrollToProject(index, projectGrid, projectNav);
     });
     projectNav.appendChild(dot);
   });
 
-  const projects = document.querySelectorAll('.project-item');
-  const navDots = document.querySelectorAll('.nav-dot');
+  const projects = projectGrid.querySelectorAll('.project-item');
+  const navDots = projectNav.querySelectorAll('.nav-dot');
 
   function scrollToProject(index) {
     const projectItem = projects[index];
     const centerPosition = projectItem.offsetLeft - (projectGrid.offsetWidth / 2) + (projectItem.offsetWidth / 2);
-    console.log(`Scrolling to project index: ${index}, centerPosition: ${centerPosition}`);
     projectGrid.scrollTo({
       left: centerPosition,
       behavior: 'smooth'
@@ -166,7 +199,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function updateActiveDot(index) {
-    console.log(`Updating active dot to index: ${index}`);
     navDots.forEach((dot, i) => {
       dot.classList.toggle('active', i === index);
     });
@@ -176,13 +208,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectItemWidth = projects[0].offsetWidth;
     const adjustedScrollLeft = projectGrid.scrollLeft + (projectGrid.offsetWidth / 2);
     const currentIndex = Math.round(adjustedScrollLeft / projectItemWidth) - 1;
-    console.log(`Current index calculated: ${currentIndex}, scrollLeft: ${projectGrid.scrollLeft}, adjustedScrollLeft: ${adjustedScrollLeft}, projectItemWidth: ${projectItemWidth}`);
     return Math.max(0, currentIndex); // Ensure the index does not go below 0
   }
 
   projectGrid.addEventListener('scroll', () => {
     const index = getCurrentIndex();
-    console.log(`Scroll event: new index is ${index}`);
     updateActiveDot(index);
   });
 
@@ -191,27 +221,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   projectGrid.addEventListener('touchstart', e => {
     touchStartX = e.changedTouches[0].screenX;
-    console.log(`Touch start: ${touchStartX}`);
   }, false);
 
   projectGrid.addEventListener('touchend', e => {
     touchEndX = e.changedTouches[0].screenX;
-    console.log(`Touch end: ${touchEndX}`);
     handleSwipe();
   }, false);
 
   function handleSwipe() {
     const threshold = 50;
     const currentIndex = getCurrentIndex();
-    console.log(`Handling swipe: touchStartX: ${touchStartX}, touchEndX: ${touchEndX}, currentIndex: ${currentIndex}`);
 
     if (touchStartX - touchEndX > threshold) {
       const nextIndex = Math.min(currentIndex + 1, projects.length - 1);
-      console.log(`Swiped left: nextIndex: ${nextIndex}`);
       scrollToProject(nextIndex);
     } else if (touchEndX - touchStartX > threshold) {
       const prevIndex = Math.max(currentIndex - 1, 0);
-      console.log(`Swiped right: prevIndex: ${prevIndex}`);
       scrollToProject(prevIndex);
     }
   }
@@ -220,37 +245,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const rect = projectGrid.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const currentIndex = getCurrentIndex();
-    console.log(`Click event: x: ${x}, currentIndex: ${currentIndex}`);
 
     if (x < rect.width * 0.1) {
       const prevIndex = Math.max(currentIndex - 1, 0);
-      console.log(`Tap left area: prevIndex: ${prevIndex}`);
       scrollToProject(prevIndex);
     } else if (x > rect.width * 0.9) {
       const nextIndex = Math.min(currentIndex + 1, projects.length - 1);
-      console.log(`Tap right area: nextIndex: ${nextIndex}`);
       scrollToProject(nextIndex);
     }
   });
 
-  // Ensure initial state
+  // Initialize carousel to the first project
   function initialize() {
-    // Scroll to the first project and activate the first dot
     scrollToProject(0);
     updateActiveDot(0);
   }
 
   initialize();
-});
-
-
-
-
-
-
-
-
-
-
-
-
+}
