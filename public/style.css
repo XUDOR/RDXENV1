@@ -145,6 +145,10 @@ header {
 
 }
 
+.tx-FilmTitle {
+  color:#a0c0c0;
+}
+
 .projCopy {
   color: #829d9e;
   font-weight: 300;
@@ -152,13 +156,15 @@ header {
   text-align: left;
 }
 
-.ProjInfo-IP {
+.ProjInfo-IP, 
+.ProjInfo-LD
+{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   border-left: 1px solid #225f6e;
+  height: auto;
   padding: 5px;
-  height: 90px;
   /* Set equal height for both containers */
 }
 
