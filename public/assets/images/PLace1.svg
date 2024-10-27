@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Helvetica, Helvetica;
+        font-size: 12px;
+      }
+
+      .cls-2 {
+        fill: #d5e2e0;
+      }
+
+      .cls-3 {
+        letter-spacing: -.07em;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer_1">
+    <g>
+      <rect class="cls-2" width="150" height="150"/>
+      <text class="cls-1" transform="translate(75.95 138.26)"><tspan x="0" y="0">Logo: 20</tspan><tspan class="cls-3" x="46.71" y="0">1</tspan><tspan x="52.5" y="0">1</tspan></text>
+    </g>
+  </g>
+</svg>
